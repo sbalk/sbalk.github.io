@@ -1,0 +1,13 @@
+baseURL = 'https://stijnba.lk/'
+languageCode = 'en-us'
+title = 'Stijn Balk'
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'

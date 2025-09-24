@@ -1,0 +1,133 @@
+{{ define "main" }}
+<div class="home-container">
+  <div class="banner">
+    <div class="banner-content">
+      <div class="left-column">
+        <div class="profile-section">
+          <div class="profile-image">
+            <img src="/images/robot.png" alt="robot" />
+          </div>
+          <h2>Stijn Balk</h2>
+          <p class="role">Machine Learning Engineer</p>
+          <p class="company">Freelancer</p>
+          <div class="social-links">
+            <!--   <a href="https://www.linkedin.com/in/stijnbalk/" class="social-link"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://scholar.google.com/citations?user=DjwvupwAAAAJ&hl=en"
+              class="social-link"
+              ><i class="fab fa-google-scholar"></i
+            ></a>
+            <a href="https://github.com/sbalk" class="social-link"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="mailto:info@stijnba.lk" class="social-link"
+              ><i class="fas fa-envelope"></i
+            ></a> -->
+            <a
+              href="https://www.linkedin.com/in/stijnbalk/"
+              class="social-link"
+            >
+              {{ partial "icons/linkedin.html" . }}
+            </a>
+            <a href="https://github.com/sbalk" class="social-link">
+              {{ partial "icons/github.html" . }}
+            </a>
+            <a
+              href="https://scholar.google.com/citations?user=DjwvupwAAAAJ&hl=en"
+              class="social-link"
+            >
+              {{ partial "icons/google-scholar.html" . }}
+            </a>
+            <a href="mailto:info@stijnba.lk" class="social-link">
+              {{ partial "icons/envelope.html" . }}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-column">
+        <div class="content-row">
+          <div class="about-section">
+            <h3>About me</h3>
+            <p>
+              My name is Stijn, I like emerging technologies that have a lot of
+              growth potential. I live in the Netherlands and in Spain.
+            </p>
+            <p>
+              I've worked in quantum computing, brain computer interfaces and
+              artificial intelligence which you can see here
+              <a
+                href="https://www.linkedin.com/in/stijnbalk/"
+                class="inline-icon-link"
+              >
+                {{ partial "icons/linkedin.html" . }} </a
+              >. I'm currently working as a freelancer with a preference for
+              quickly building MVP's.
+            </p>
+          </div>
+        </div>
+
+        <div class="content-row two-columns">
+          <div class="column">
+            <h3>Interests</h3>
+            <ul>
+              <li>Neurotechnology</li>
+              <li>Machine learning</li>
+              <li>Brain computer interfaces</li>
+              <li>Open-source software</li>
+              <li>Sailing</li>
+              <li>Blockchain technology</li>
+              <li>Cybersecurity</li>
+              <li>Information sharing</li>
+            </ul>
+          </div>
+          <div class="column">
+            <h3>Education</h3>
+            <ul>
+              <li>BSc Mechanical Engineering 2012 - TU Delft</li>
+              <li>MSc Applied Physics 2015 - TU Delft</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="content-row two-columns">
+          <div class="column">
+            <h3>Experience</h3>
+            <ul>
+              <li>2025 Machine learning engineer</li>
+              <li>2020-2024 Design engineer BCI</li>
+              <li>
+                2018-2020 Software engineer, freelance; finance, neuroscience,
+                healthcare
+              </li>
+              <li>2017-2018 Machine learning engineer</li>
+              <li>
+                2016-2017 Quantum engineer (<a
+                  href="https://scholar.google.com/citations?user=DjwvupwAAAAJ&hl=en"
+                  >publications</a
+                >)
+              </li>
+            </ul>
+            <p>
+              <em
+                >Drop me an email for a complete and up-to-date version of my
+                CV.</em
+              >
+            </p>
+          </div>
+          <div class="column">
+            <h3>Other things I did or am doing</h3>
+            <ul>
+              <li><a href="#">neurotechhub.org</a></li>
+              <li><a href="#">oseaspaces.com</a></li>
+              <li>2018 - 2020 meetup deep learning study group</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
