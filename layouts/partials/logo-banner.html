@@ -1,0 +1,98 @@
+<!-- Sliding Logo Banner -->
+<div class="logo-banner">
+  <div class="logo-track">
+    {{ $logos := slice }} {{ range (readDir "static/images/past_clients") }} {{
+    if not (hasPrefix .Name ".") }} {{ $logos = $logos | append . }} {{ end }}
+    {{ end }}
+
+    <!-- First set of logos -->
+    {{ range $logos }}
+    <img
+      src="/images/past_clients/{{ .Name }}"
+      alt="Client logo"
+      class="logo-item"
+    />
+    {{ end }}
+
+    <!-- Duplicate set for seamless loop -->
+    {{ range $logos }}
+    <img
+      src="/images/past_clients/{{ .Name }}"
+      alt="Client logo"
+      class="logo-item"
+    />
+    {{ end }}
+  </div>
+</div>
+
+<style>
+  /* Configurable variables */
+  :root {
+    --logo-height: 60px;
+    --scroll-speed: 20s;
+  }
+
+  .logo-banner {
+    overflow: hidden;
+    padding: 1.5rem 0;
+    background: transparent;
+    margin-top: 3rem;
+  }
+
+  /* Fade-out edges */
+  .logo-banner::before,
+  .logo-banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .logo-banner::before {
+    left: 0;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0)
+    );
+  }
+
+  .logo-banner::after {
+    right: 0;
+    background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0)
+    );
+  }
+
+  .logo-track {
+    display: flex;
+    justify-content: space-evenly;
+    animation: scroll var(--scroll-speed) linear infinite;
+    min-width: 200%;
+  }
+
+  .logo-track:hover {
+    animation-play-state: paused;
+  }
+
+  .logo-item {
+    height: var(--logo-height);
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+</style>
