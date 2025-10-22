@@ -5,36 +5,62 @@
     if not (hasPrefix .Name ".") }} {{ $logos = $logos | append . }} {{ end }}
     {{ end }}
 
-    <!-- First set of logos -->
-    {{ range $logos }}
-    <img
-      src="/images/past_clients/{{ .Name }}"
-      alt="Client logo"
-      class="logo-item"
-    />
-    {{ end }}
+    <div class="logo-set">
+      {{ range $logos }}
+        {{ $url := index $.Site.Data.client_urls .Name }}
+        {{ if $url }}
+          <a href="{{ $url }}" target="_blank" rel="noopener noreferrer" class="logo-link">
+            <img
+              src="/images/past_clients/{{ .Name }}"
+              alt="Client logo"
+              class="logo-item"
+            />
+          </a>
+        {{ else }}
+          <img
+            src="/images/past_clients/{{ .Name }}"
+            alt="Client logo"
+            class="logo-item"
+          />
+        {{ end }}
+      {{ end }}
+    </div>
 
-    <!-- Duplicate set for seamless loop -->
-    {{ range $logos }}
-    <img
-      src="/images/past_clients/{{ .Name }}"
-      alt="Client logo"
-      class="logo-item"
-    />
-    {{ end }}
+    <div class="logo-set">
+      {{ range $logos }}
+        {{ $url := index $.Site.Data.client_urls .Name }}
+        {{ if $url }}
+          <a href="{{ $url }}" target="_blank" rel="noopener noreferrer" class="logo-link">
+            <img
+              src="/images/past_clients/{{ .Name }}"
+              alt="Client logo"
+              class="logo-item"
+            />
+          </a>
+        {{ else }}
+          <img
+            src="/images/past_clients/{{ .Name }}"
+            alt="Client logo"
+            class="logo-item"
+          />
+        {{ end }}
+      {{ end }}
+    </div>
   </div>
 </div>
 
 <style>
   /* Configurable variables */
   :root {
-    --logo-height: 60px;
+    --logo-height: 40px;
+    --logo-gap: 3rem;
     --scroll-speed: 20s;
   }
 
   .logo-banner {
+    position: relative;
     overflow: hidden;
-    padding: 1.5rem 0;
+    padding-bottom: 1.5rem;
     background: transparent;
     margin-top: 3rem;
   }
@@ -71,13 +97,25 @@
 
   .logo-track {
     display: flex;
-    justify-content: space-evenly;
     animation: scroll var(--scroll-speed) linear infinite;
-    min-width: 200%;
+    width: fit-content;
   }
 
   .logo-track:hover {
     animation-play-state: paused;
+  }
+
+  .logo-set {
+    display: flex;
+    gap: var(--logo-gap);
+    flex-shrink: 0;
+    padding-right: var(--logo-gap);
+  }
+
+  .logo-link {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
   }
 
   .logo-item {
@@ -85,6 +123,15 @@
     width: auto;
     object-fit: contain;
     flex-shrink: 0;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+  }
+
+  .logo-item:hover,
+  .logo-link:hover .logo-item {
+    filter: grayscale(0%);
+    opacity: 1;
   }
 
   @keyframes scroll {
