@@ -1,238 +1,249 @@
 {{ define "main" }}
 <div class="page-container">
-  <div class="page-content">
-    <h1>{{ .Title }}</h1>
+  <div class="services-layout">
+    <div class="services-left-column">
+      <div class="services-image">
+        <img src="/images/servies.jpg" alt="Services" />
+      </div>
+    </div>
 
-    <div class="about-section">
-      {{ .Content }}
+    <div class="services-right-column">
+      <h1>{{ .Title }}</h1>
 
-      <details name="services">
-        <summary>
-          <strong>System Design & Architecture</strong>
-          <p>
-            Plan, structure and develop technical solutions that align with your
-            business goals and scale as your needs evolve.
-          </p>
-        </summary>
-        <ul>
-          <li>
-            <strong>Requirements Analysis:</strong> Working with you to
-            understand and document what your system needs to accomplish.
-          </li>
-          <li>
-            <strong>Design & Architecture:</strong> Creating technical
-            architectures and interfaces that make sure usage is efficient and
-            intuitive.
-          </li>
-          <li>
-            <strong>Data Architecture:</strong> Planning how your data should be
-            stored, accessed, and protected as your application grows.
-          </li>
-          <li>
-            <strong>Infrastructure Planning:</strong> Designing deployment and
-            automation strategies that keep your systems reliable and
-            maintainable.
-          </li>
-          <li>
-            <strong>Technical Roadmapping:</strong> Outlining a practical path
-            forward for step-by-step development.
-          </li>
-        </ul>
-        <br />
-      </details>
+      <div class="about-section">
+        {{ .Content }}
 
-      <details name="services">
-        <summary>
-          <strong>Business Automation</strong>
-          <p>
-            Helping streamline repetitive workflows through automation, allowing
-            you to focus on what matters most to your business.
-          </p>
-        </summary>
-        <ul>
-          <li>
-            <strong>Web Scraping & Data Collection:</strong> Gathering and
-            structuring data from websites and online sources and interact with
-            websites.
-          </li>
-          <li>
-            <strong>AI-Powered Data Extraction:</strong> Leveraging modern
-            language and vision models to extract meaningful information from
-            documents and unstructured data.
-          </li>
-          <li>
-            <strong>Business Analytics:</strong> Processing and analyzing
-            financial data, reports, and business metrics to inform
-            decision-making.
-          </li>
-          <li>
-            <strong>Custom Dashboards:</strong> Building intuitive dashboards
-            that provide clear insights into your key business metrics.
-          </li>
-          <li>
-            <strong>Website Integrations:</strong> Adding functionality to your
-            existing website, including custom tools, chatbots, and interactive
-            features.
-          </li>
-        </ul>
-        <br />
-      </details>
+        <details name="services">
+          <summary>
+            <strong>System Design & Architecture</strong>
+            <p>
+              Plan, structure and develop technical solutions that align with
+              your business goals and scale as your needs evolve.
+            </p>
+          </summary>
+          <ul>
+            <li>
+              <strong>Requirements Analysis:</strong> Working with you to
+              understand and document what your system needs to accomplish.
+            </li>
+            <li>
+              <strong>Design & Architecture:</strong> Creating technical
+              architectures and interfaces that make sure usage is efficient and
+              intuitive.
+            </li>
+            <li>
+              <strong>Data Architecture:</strong> Planning how your data should
+              be stored, accessed, and protected as your application grows.
+            </li>
+            <li>
+              <strong>Infrastructure Planning:</strong> Designing deployment and
+              automation strategies that keep your systems reliable and
+              maintainable.
+            </li>
+            <li>
+              <strong>Technical Roadmapping:</strong> Outlining a practical path
+              forward for step-by-step development.
+            </li>
+          </ul>
+          <br />
+        </details>
 
-      <details name="services">
-        <summary>
-          <strong>API and Backend Development</strong>
-          <p>
-            Create robust and scalable APIs using Python, FastAPI, and a
-            database, that integrate with your website or application.
-          </p>
-        </summary>
-        <ul>
-          <li>
-            <strong>Custom Web Application Development:</strong> Tailored
-            solutions to meet your specific business needs, ensuring high
-            performance and security.
-          </li>
-          <li>
-            <strong>API Development:</strong> Designing and implementing
-            efficient and scalable APIs for seamless integration with your
-            front-end applications and third-party services.
-          </li>
-          <li>
-            <strong>Database Design & Management:</strong> Skilled in designing
-            and optimizing database solutions to ensure reliable data storage
-            and efficient retrieval.
-          </li>
-          <li>
-            <strong>End-to-End Project Management:</strong> Offering complete
-            project support from initial discovery and planning through to
-            deployment and ongoing maintenance.
-          </li>
-          <li>
-            <strong>Code Quality and Best Practices:</strong> Adherence to
-            industry standards and best practices to deliver clean,
-            maintainable, and well-documented code.
-          </li>
-        </ul>
-        <br />
-      </details>
+        <details name="services">
+          <summary>
+            <strong>Business Automation</strong>
+            <p>
+              Helping streamline repetitive workflows through automation,
+              allowing you to focus on what matters most to your business.
+            </p>
+          </summary>
+          <ul>
+            <li>
+              <strong>Web Scraping & Data Collection:</strong> Gathering and
+              structuring data from websites and online sources and interact
+              with websites.
+            </li>
+            <li>
+              <strong>AI-Powered Data Extraction:</strong> Leveraging modern
+              language and vision models to extract meaningful information from
+              documents and unstructured data.
+            </li>
+            <li>
+              <strong>Business Analytics:</strong> Processing and analyzing
+              financial data, reports, and business metrics to inform
+              decision-making.
+            </li>
+            <li>
+              <strong>Custom Dashboards:</strong> Building intuitive dashboards
+              that provide clear insights into your key business metrics.
+            </li>
+            <li>
+              <strong>Website Integrations:</strong> Adding functionality to
+              your existing website, including custom tools, chatbots, and
+              interactive features.
+            </li>
+          </ul>
+          <br />
+        </details>
 
-      <details name="services">
-        <summary>
-          <strong>AI Engineering</strong>
-          <p>
-            Building AI-powered solutions using modern frameworks and language
-            models to add intelligent capabilities to your applications.
-          </p>
-        </summary>
-        <ul>
-          <li>
-            <strong>AI Solution Design:</strong> Developing tailored AI
-            strategies that address your specific use case and can include
-            agents, LLMs, open source models, Vision, Generation, RAGs, etc.
-          </li>
-          <li>
-            <strong>LLM Integration:</strong> Connecting your systems with
-            OpenAI, Anthropic, Gemini, or open-source models to enable natural
-            language capabilities.
-          </li>
-          <li>
-            <strong>Vision AI:</strong> Implementing document understanding and
-            image analysis using state-of-the-art vision models.
-          </li>
-          <li>
-            <strong>Generative AI:</strong> Working with image and audio
-            generation tools, including custom ComfyUI workflows for visual
-            content.
-          </li>
-          <li>
-            <strong>Dataset Development:</strong> Creating and curating datasets
-            to support training, fine-tuning, or evaluation of AI models.
-          </li>
-          <li>
-            <strong>Documentation & Knowledge Transfer:</strong> Providing clear
-            documentation and guidance so your team can understand and maintain
-            the AI solutions.
-          </li>
-        </ul>
-        <br />
-      </details>
+        <details name="services">
+          <summary>
+            <strong>API and Backend Development</strong>
+            <p>
+              Create robust and scalable APIs using Python, FastAPI, and a
+              database, that integrate with your website or application.
+            </p>
+          </summary>
+          <ul>
+            <li>
+              <strong>Custom Web Application Development:</strong> Tailored
+              solutions to meet your specific business needs, ensuring high
+              performance and security.
+            </li>
+            <li>
+              <strong>API Development:</strong> Designing and implementing
+              efficient and scalable APIs for seamless integration with your
+              front-end applications and third-party services.
+            </li>
+            <li>
+              <strong>Database Design & Management:</strong> Skilled in
+              designing and optimizing database solutions to ensure reliable
+              data storage and efficient retrieval.
+            </li>
+            <li>
+              <strong>End-to-End Project Management:</strong> Offering complete
+              project support from initial discovery and planning through to
+              deployment and ongoing maintenance.
+            </li>
+            <li>
+              <strong>Code Quality and Best Practices:</strong> Adherence to
+              industry standards and best practices to deliver clean,
+              maintainable, and well-documented code.
+            </li>
+          </ul>
+          <br />
+        </details>
 
-      <details name="services">
-        <summary>
-          <strong>DevOps & Infrastructure</strong>
-          <p>
-            Setting up reliable deployment pipelines and infrastructure that
-            helps your applications run smoothly and cost-effectively.
-          </p>
-        </summary>
-        <ul>
-          <li>
-            <strong>Automated Deployment:</strong> Building deployment processes
-            that reduce manual work and minimize the risk of errors during
-            releases.
-          </li>
-          <li>
-            <strong>Security Hardening:</strong> Implementing practical security
-            measures to protect your applications and infrastructure.
-          </li>
-          <li>
-            <strong>Cloud Cost Optimization:</strong> Reviewing and optimizing
-            cloud resource usage to help reduce expenses while maintaining
-            performance.
-          </li>
-          <li>
-            <strong>CI/CD Pipelines:</strong> Setting up continuous integration
-            and deployment workflows that automate testing and releases.
-          </li>
-          <li>
-            <strong>Monitoring & Observability:</strong> Adding logging and
-            monitoring to help you understand system behavior and catch issues
-            early.
-          </li>
-        </ul>
-        <br />
-      </details>
+        <details name="services">
+          <summary>
+            <strong>AI Engineering</strong>
+            <p>
+              Building AI-powered solutions using modern frameworks and language
+              models to add intelligent capabilities to your applications.
+            </p>
+          </summary>
+          <ul>
+            <li>
+              <strong>AI Solution Design:</strong> Developing tailored AI
+              strategies that address your specific use case and can include
+              agents, LLMs, open source models, Vision, Generation, RAGs, etc.
+            </li>
+            <li>
+              <strong>LLM Integration:</strong> Connecting your systems with
+              OpenAI, Anthropic, Gemini, or open-source models to enable natural
+              language capabilities.
+            </li>
+            <li>
+              <strong>Vision AI:</strong> Implementing document understanding
+              and image analysis using state-of-the-art vision models.
+            </li>
+            <li>
+              <strong>Generative AI:</strong> Working with image and audio
+              generation tools, including custom ComfyUI workflows for visual
+              content.
+            </li>
+            <li>
+              <strong>Dataset Development:</strong> Creating and curating
+              datasets to support training, fine-tuning, or evaluation of AI
+              models.
+            </li>
+            <li>
+              <strong>Documentation & Knowledge Transfer:</strong> Providing
+              clear documentation and guidance so your team can understand and
+              maintain the AI solutions.
+            </li>
+          </ul>
+          <br />
+        </details>
 
-      <details name="services">
-        <summary>
-          <strong>Payment & Subscription Systems</strong>
-          <p>
-            Implementing payment processing and subscription providers such as
-            Stripe to help you monetize your product or service.
-          </p>
-        </summary>
-        <ul>
-          <li>
-            <strong>Payment Gateway Integration:</strong> Connecting your
-            application with payment providers to process transactions securely.
-          </li>
-          <li>
-            <strong>Checkout Optimization:</strong> Designing checkout flows
-            that provide a smooth user experience and help reduce abandonment.
-          </li>
-          <li>
-            <strong>Subscription Management:</strong> Building systems to handle
-            recurring payments, plan changes, and billing cycles.
-          </li>
-          <li>
-            <strong>Compliance & Security:</strong> Ensuring payment handling
-            follows industry standards and protects customer data.
-          </li>
-          <li>
-            <strong>Analytics & Reporting:</strong> Adding tracking and
-            reporting to help you understand payment patterns and subscription
-            metrics.
-          </li>
-        </ul>
-        <br />
-      </details>
+        <details name="services">
+          <summary>
+            <strong>DevOps & Infrastructure</strong>
+            <p>
+              Setting up reliable deployment pipelines and infrastructure that
+              helps your applications run smoothly and cost-effectively.
+            </p>
+          </summary>
+          <ul>
+            <li>
+              <strong>Automated Deployment:</strong> Building deployment
+              processes that reduce manual work and minimize the risk of errors
+              during releases.
+            </li>
+            <li>
+              <strong>Security Hardening:</strong> Implementing practical
+              security measures to protect your applications and infrastructure.
+            </li>
+            <li>
+              <strong>Cloud Cost Optimization:</strong> Reviewing and optimizing
+              cloud resource usage to help reduce expenses while maintaining
+              performance.
+            </li>
+            <li>
+              <strong>CI/CD Pipelines:</strong> Setting up continuous
+              integration and deployment workflows that automate testing and
+              releases.
+            </li>
+            <li>
+              <strong>Monitoring & Observability:</strong> Adding logging and
+              monitoring to help you understand system behavior and catch issues
+              early.
+            </li>
+          </ul>
+          <br />
+        </details>
 
-      <p>
-        <em>
-          Drop me an <a href="mailto:info@stijnba.lk">email</a> if you want to
-          talk.
-        </em>
-      </p>
+        <details name="services">
+          <summary>
+            <strong>Payment & Subscription Systems</strong>
+            <p>
+              Implementing payment processing and subscription providers such as
+              Stripe to help you monetize your product or service.
+            </p>
+          </summary>
+          <ul>
+            <li>
+              <strong>Payment Gateway Integration:</strong> Connecting your
+              application with payment providers to process transactions
+              securely.
+            </li>
+            <li>
+              <strong>Checkout Optimization:</strong> Designing checkout flows
+              that provide a smooth user experience and help reduce abandonment.
+            </li>
+            <li>
+              <strong>Subscription Management:</strong> Building systems to
+              handle recurring payments, plan changes, and billing cycles.
+            </li>
+            <li>
+              <strong>Compliance & Security:</strong> Ensuring payment handling
+              follows industry standards and protects customer data.
+            </li>
+            <li>
+              <strong>Analytics & Reporting:</strong> Adding tracking and
+              reporting to help you understand payment patterns and subscription
+              metrics.
+            </li>
+          </ul>
+          <br />
+        </details>
+
+        <p>
+          <em>
+            Drop me an <a href="mailto:info@stijnba.lk">email</a> if you want to
+            talk.
+          </em>
+        </p>
+      </div>
     </div>
   </div>
 </div>
