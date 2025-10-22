@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   margin: 0;
   font-family: "ArbutusSlab", serif;
@@ -201,9 +205,33 @@ main {
   left: 0;
 }
 
+.about-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-section li {
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  position: relative;
+  margin-left: 1rem;
+}
+
+.about-section li:before {
+  content: "•";
+  color: #0066cc;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
 .about-section p {
   margin-bottom: 1rem;
   color: #000;
+}
+
+.about-section details summary p {
+  padding-left: 20px;
 }
 
 .page-container {
